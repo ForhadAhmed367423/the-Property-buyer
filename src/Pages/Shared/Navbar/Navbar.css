@@ -1,0 +1,12 @@
+.hub:hover{
+    background: #BC8664;
+    color: white;
+    border-radius: 10px;
+}
+.hub{
+    transition: 0.8s;
+    color:#BC8664;
+    font-weight: 600;
+    padding: 10px 10px;
+    
+}

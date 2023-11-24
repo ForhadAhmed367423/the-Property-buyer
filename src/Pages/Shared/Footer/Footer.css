@@ -1,0 +1,19 @@
+.Foot{
+    transition: 0.8s;
+
+}
+.foot:hover{
+    color:#BC8664;
+}
+
+.footIcon{
+    background: #BC8664;
+    color: white;
+    padding: 7px 7px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+.footIcon:hover{
+    color: rgb(201, 195, 195);
+}

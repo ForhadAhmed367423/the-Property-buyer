@@ -1,0 +1,9 @@
+.optionsStyle{
+    
+    color: black;
+}
+.optionsStyle:hover{
+    background: #BC8664;
+    color: white;
+    
+}
