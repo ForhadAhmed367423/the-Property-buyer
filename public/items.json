@@ -1,6 +1,36 @@
 [
     
     {
+      "image": "https://i.ibb.co/bgr6GvT/a11.jpg",
+      "title": "Villa with Amazing View",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "Forhad Ahmed",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Condos"
+    },
+    {
+      "image": "https://i.ibb.co/52ZB0JC/a10.jpg ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Townhouse for Sale",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Shop"
+    },
+    {
       "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -11,47 +41,27 @@
       "category": "Sale"
     },
     {
-      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "image": "https://i.ibb.co/JmxvdCs/a9.webp",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
       "agent_name": "John Doe",
       "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
       "status": "Verified",
       "price": "$1,000,000 - $1,500,000",
-      "category": "Sale"
+      "category": "Apartment"
     },
     {
-      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
-      "title": "Luxurious Beachfront Villa",
+      "image": "https://i.ibb.co/WfzTTPQ/a7.webp      ",
+      "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
       "agent_name": "John Doe",
       "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
       "status": "Verified",
       "price": "$1,000,000 - $1,500,000",
-      "category": "Sale"
+      "category": "Commercial"
     },
     {
-      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
-      "title": "Luxurious Beachfront Villa",
-      "location": "123 Ocean Avenue, Paradise City",
-      "agent_name": "John Doe",
-      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
-      "status": "Verified",
-      "price": "$1,000,000 - $1,500,000",
-      "category": "Rent"
-    },
-    {
-      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
-      "title": "Luxurious Beachfront Villa",
-      "location": "123 Ocean Avenue, Paradise City",
-      "agent_name": "John Doe",
-      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
-      "status": "Verified",
-      "price": "$1,000,000 - $1,500,000",
-      "category": "Rent"
-    },
-    {
-      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "image": "https://i.ibb.co/xqgXhQk/a6.webp      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
       "agent_name": "John Doe",
@@ -59,7 +69,300 @@
       "status": "Not-Verified",
       "price": "$1,000,000 - $1,500,000",
       "category": "Rent"
-    }
+    },
+    {
+      "image": "https://i.ibb.co/CP2Ch08/a5.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    },
+    {
+      "image": "https://i.ibb.co/16N0tHP/a4.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "  Studios"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Rent"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Condos"
+    },
     
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Commercial"
+    },
+    {
+      "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Shop"
+    },
+    
+    {
+      "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
+      "title": "Townhouse for Sale",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "  Studios"
+    },
+    {
+      "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    },
+    {
+      "image": "https://i.ibb.co/HCcg5t6/a1.jpg      ",
+      "title": "Townhouse for Sale",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    },
+    {
+      "image": "https://i.ibb.co/bgr6GvT/a11.jpg",
+      "title": "Villa with Amazing View",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "Forhad Ahmed",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Condos"
+    },
+    {
+      "image": "https://i.ibb.co/52ZB0JC/a10.jpg ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Townhouse for Sale",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Shop"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/JmxvdCs/a9.webp",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Apartment"
+    },
+    {
+      "image": "https://i.ibb.co/WfzTTPQ/a7.webp      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Commercial"
+    },
+    {
+      "image": "https://i.ibb.co/xqgXhQk/a6.webp      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Rent"
+    },
+    {
+      "image": "https://i.ibb.co/CP2Ch08/a5.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    },
+    {
+      "image": "https://i.ibb.co/16N0tHP/a4.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "  Studios"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Rent"
+    },
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Condos"
+    },
+    
+    {
+      "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Commercial"
+    },
+    {
+      "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
+      "title": "Gorgeous Condo in Denver",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Shop"
+    },
+    
+    {
+      "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
+      "title": "Townhouse for Sale",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "  Studios"
+    },
+    {
+      "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    },
+    {
+      "image": "https://i.ibb.co/HCcg5t6/a1.jpg      ",
+      "title": "Townhouse for Sale",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Residential"
+    }
   ]
   

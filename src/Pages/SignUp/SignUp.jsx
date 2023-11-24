@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
@@ -46,9 +46,9 @@ const SignUp = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
-      <Helmet>
+      {/* <Helmet>
         <title>Bistro Boss | Sign Up</title>
-      </Helmet>
+      </Helmet> */}
       <div className="hero-content flex-col lg:flex">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Sign Up now!</h1>

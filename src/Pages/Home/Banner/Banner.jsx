@@ -3,7 +3,7 @@ const Banner = () => {
     const componentStyles = {
         outline: 'none',
         // other styles here
-      };
+    };
     return (
         <div className="bg-[#F9F8F3] flex justify-center items-center ">
             <div className="join my-24 ">
@@ -17,22 +17,22 @@ const Banner = () => {
                     <option>Commercial</option>
                     <option>Office</option>
                     <option>Residential</option>
-                    <option>Shop</option>  
-                    <option>Apartment</option>  
-                    <option>Studio</option> 
+                    <option>Shop</option>
+                    <option>Apartment</option>
+                    <option>  Studios</option>
                 </select>
                 <select style={componentStyles} className="select select-bordered join-item  font">
                     <option disabled selected>Sell or Rent</option>
                     <option>For Rent</option>
                     <option>For Sale</option>
-                    
+
                 </select>
                 <select style={componentStyles} className="select select-bordered join-item  font ">
                     <option disabled selected>Property Status</option>
                     <option>Listing</option>
                     <option>Active</option>
                     <option>Open</option>
-                    
+
                 </select>
                 <div className="indicator">
                     <button className="px-4 text-white font join-item bg-[#BC8664]">Search</button>

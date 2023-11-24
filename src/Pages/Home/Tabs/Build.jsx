@@ -24,6 +24,9 @@ const Build = ({ house }) => {
                 <div className="card-actions ">
                     <p className="text-[#C28864] font font-bold text-lg">{price}</p>
                 </div>
+                <div className="card-actions justify-center mt-4 ">
+                    <button className="primaryBtn btn-wide">Details</button>
+                </div>
             </div>
         </div>
     );

@@ -1,9 +1,9 @@
-import { useContext, useEffect,  useState } from "react";
-import { Helmet } from "react-helmet-async";
+import {  useContext, useEffect,  useState } from "react";
+// import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { loadCaptchaEnginge, LoadCanvasTemplate,validateCaptcha } from 'react-simple-captcha';
-import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = () => {
     const [disabled,setDisabled]= useState(true);
@@ -11,7 +11,7 @@ const Login = () => {
     const location= useLocation();
     const from = location.state?.from?.pathname || "/"
 
-    const {login}= useContext(AuthContext)
+    const {login}= useContext(AuthContext);
 
     useEffect(()=>{
         loadCaptchaEnginge(6);
@@ -52,9 +52,7 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
-            <Helmet>
-                <title>Bistro Boss | Login</title>
-            </Helmet>
+            
   <div className="hero-content flex-col lg:flex">
     <div className="text-center">
       <h1 className="text-5xl  font-bold">Login now!</h1>
