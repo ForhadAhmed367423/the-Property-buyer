@@ -1,0 +1,65 @@
+[
+    
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Sale"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Rent"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Rent"
+    },
+    {
+      "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
+      "title": "Luxurious Beachfront Villa",
+      "location": "123 Ocean Avenue, Paradise City",
+      "agent_name": "John Doe",
+      "agent_image": "https://i.ibb.co/Y2qxXdk/developer.webp",
+      "status": "Not-Verified",
+      "price": "$1,000,000 - $1,500,000",
+      "category": "Rent"
+    }
+    
+  ]
+  
