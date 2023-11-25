@@ -10,7 +10,7 @@ import { MdOutlineRateReview  } from "react-icons/md";
 const Drawe = () => {
     return (
         <div>
-            <div className="drawer drawer-open lg:w-1/4 ">
+            <div className="drawer drawer-open lg:w-1/4 min-h-screen">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
 
@@ -21,9 +21,9 @@ const Drawe = () => {
                         <h2 className="text-center text-2xl font font-bold mb-6 text-white">Dashboard</h2>
                         {/* Sidebar content here */}
                         <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link className="flex items-center gap-2" to={'profile'}><CgProfile/><span>My Profile</span></Link></li>
-                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link className="flex items-center gap-2"><GoHeart/><span>Wishlist</span></Link></li>
-                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link className="flex items-center gap-2"><RiHomeOfficeLine/><span>Property bought</span></Link></li>
-                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link className="flex items-center gap-2"><MdOutlineRateReview /><span>My reviews</span></Link></li>
+                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'wishlist'} className="flex items-center gap-2"><GoHeart/><span>Wishlist</span></Link></li>
+                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'property'} className="flex items-center gap-2"><RiHomeOfficeLine/><span>Property bought</span></Link></li>
+                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'reviews'} className="flex items-center gap-2"><MdOutlineRateReview /><span>My reviews</span></Link></li>
 
                     </ul>
 

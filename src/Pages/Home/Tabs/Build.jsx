@@ -1,4 +1,3 @@
-import { GrFavorite } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -17,7 +16,7 @@ const Build = ({ house }) => {
             </figure>
             <div className="flex items-center  absolute top-[165px] left-3 gap-64">
                 <img src={agent_image} className="rounded-full h-16 w-16" alt="" />
-                <button className="text-2xl text-white"> <GrFavorite /> </button>
+                
 
             </div>
             <div className="absolute right-[15px] top-[15px]">

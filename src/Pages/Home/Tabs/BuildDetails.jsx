@@ -19,6 +19,8 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 
 const BuildDetails = () => {
+
+    
     const item = useLoaderData();
 
     const { image, title, location, agent_name, agent_image, status, price, category } = item;
@@ -35,8 +37,8 @@ const BuildDetails = () => {
                     <h1 className="text-4xl font font-bold">{title}</h1>
 
                     <div className="flex gap-2 items-center font font-semibold my-5">
-                    <CiLocationOn /> 
-                    <p>{location}</p>
+                        <CiLocationOn />
+                        <p>{location}</p>
                     </div>
                 </div>
                 <div>
@@ -75,7 +77,11 @@ const BuildDetails = () => {
 
                 <div className="w-2/4 bg-[#FFFFFF] p-4 rounded-lg">
                     <h2 className="text-center font-bold font text-lg my-5">Description</h2>
-                    <p className="font font-semibold">Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage. Master bedroom includes both a standard closet and custom closet wall unit.Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage. Master bedroom includes both a standard closet and custom closet wall unit.</p>
+                    <p className="font font-semibold">Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage. Master bedroom includes both a standard closet and custom closet wall unit.Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer.</p>
+                    <div className="flex justify-center ">
+                        <button className="text-center btn ">        <span>Add To Wishlist</span> <GrFavorite /></button>
+
+                    </div>
                 </div>
             </div>
             {/* Swiper section ends */}
@@ -97,7 +103,7 @@ const BuildDetails = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div>
 
             </div>

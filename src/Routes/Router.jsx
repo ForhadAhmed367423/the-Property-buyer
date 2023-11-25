@@ -7,49 +7,64 @@ import BuildDetails from "../Pages/Home/Tabs/BuildDetails";
 import AllPropertys from "../Pages/AllPropertys/AllPropertys";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Profile from "../Pages/Dashboard/DashComp/Profile";
+import Wishlist from "../Pages/Dashboard/DashComp/Wishlist";
+import Property from "../Pages/Dashboard/DashComp/Property ";
+import Reviews from "../Pages/Dashboard/DashComp/Reviews";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-          path:'/',
-          element:<Home></Home>,
-          loader: ()=>fetch('http://localhost:8085/items')
-        },
-        {
-          path:'/login',
-          element:<Login></Login>
-        },
-        {
-          path:'/signup',
-          element:<SignUp></SignUp>
-        },
-        {
-          path:'/details/:id',
-          element:<BuildDetails></BuildDetails>,
-          loader:({params})=>fetch(`http://localhost:8085/items/${params.id}`)
-        },
-        {
-          path:'/allproperty',
-          element:<AllPropertys></AllPropertys>,
-          loader: ()=>fetch('http://localhost:8085/items')
-        },
-        {
-          path:'/dashboard',
-          element:<Dashboard></Dashboard>,
-          children: [
-            {
-              path: 'profile',
-              element: <Profile />
-            }
-            // Add more nested routes as needed
-          ]
-        }
-    
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/items')
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/details/:id',
+        element: <BuildDetails></BuildDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
+      },
+      {
+        path: '/allproperty',
+        element: <AllPropertys></AllPropertys>,
+        loader: () => fetch('http://localhost:5000/items')
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: 'profile',
+            element: <Profile />
+          },
+          {
+            path: 'wishlist',
+            element: <Wishlist />
+          },
+          {
+            path: 'property',
+            element: <Property />
+          },
+          {
+            path: 'reviews',
+            element: <Reviews />
+          },
 
-      ]
-    },
-  ]);
-  export default router;
+        ]
+      }
+
+
+    ]
+  },
+]);
+export default router;
