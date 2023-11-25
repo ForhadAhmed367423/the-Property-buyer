@@ -4,6 +4,9 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import BuildDetails from "../Pages/Home/Tabs/BuildDetails";
+import AllPropertys from "../Pages/AllPropertys/AllPropertys";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import Profile from "../Pages/Dashboard/DashComp/Profile";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +30,24 @@ const router = createBrowserRouter([
           path:'/details/:id',
           element:<BuildDetails></BuildDetails>,
           loader:({params})=>fetch(`http://localhost:8085/items/${params.id}`)
+        },
+        {
+          path:'/allproperty',
+          element:<AllPropertys></AllPropertys>,
+          loader: ()=>fetch('http://localhost:8085/items')
+        },
+        {
+          path:'/dashboard',
+          element:<Dashboard></Dashboard>,
+          children: [
+            {
+              path: 'profile',
+              element: <Profile />
+            }
+            // Add more nested routes as needed
+          ]
         }
+    
 
       ]
     },

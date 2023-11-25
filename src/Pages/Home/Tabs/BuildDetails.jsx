@@ -91,12 +91,13 @@ const BuildDetails = () => {
 
                                 <p className="py-3 font font-semibold">Agent Name: {agent_name}</p>
                                 <p className="py-3 font font-semibold">Location: {location}</p>
-                                <p className="py-3 font font-semibold">Location: {status}</p>
+                                <p className="py-3 font font-semibold">Status: {status}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
             <div>
 
             </div>
