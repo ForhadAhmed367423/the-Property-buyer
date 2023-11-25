@@ -1,6 +1,7 @@
 [
     
     {
+      "id": 1,
       "image": "https://i.ibb.co/bgr6GvT/a11.jpg",
       "title": "Villa with Amazing View",
       "location": "123 Ocean Avenue, Paradise City",
@@ -11,6 +12,7 @@
       "category": "Condos"
     },
     {
+      "id": 2,
       "image": "https://i.ibb.co/52ZB0JC/a10.jpg ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -21,6 +23,7 @@
       "category": "Sale"
     },
     {
+      "id": 3,
       "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
       "title": "Townhouse for Sale",
       "location": "123 Ocean Avenue, Paradise City",
@@ -31,6 +34,8 @@
       "category": "Shop"
     },
     {
+      "id": 4,
+
       "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -41,6 +46,8 @@
       "category": "Sale"
     },
     {
+      "id": 5,
+
       "image": "https://i.ibb.co/JmxvdCs/a9.webp",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -51,6 +58,7 @@
       "category": "Apartment"
     },
     {
+      "id": 6,
       "image": "https://i.ibb.co/WfzTTPQ/a7.webp      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -61,6 +69,7 @@
       "category": "Commercial"
     },
     {
+      "id": 7,
       "image": "https://i.ibb.co/xqgXhQk/a6.webp      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -71,6 +80,7 @@
       "category": "Rent"
     },
     {
+      "id": 8,
       "image": "https://i.ibb.co/CP2Ch08/a5.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -81,6 +91,7 @@
       "category": "Residential"
     },
     {
+      "id": 9,
       "image": "https://i.ibb.co/16N0tHP/a4.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -91,6 +102,8 @@
       "category": "  Studios"
     },
     {
+      "id": 10,
+
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -101,6 +114,8 @@
       "category": "Residential"
     },
     {
+      "id": 11,
+
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -111,6 +126,7 @@
       "category": "Sale"
     },
     {
+      "id": 12,
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -121,6 +137,7 @@
       "category": "Rent"
     },
     {
+      "id": 13,
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -132,6 +149,7 @@
     },
     
     {
+      "id": 14,
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -142,6 +160,7 @@
       "category": "Commercial"
     },
     {
+      "id": 15,
       "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -153,6 +172,7 @@
     },
     
     {
+      "id": 16,
       "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
       "title": "Townhouse for Sale",
       "location": "123 Ocean Avenue, Paradise City",
@@ -163,6 +183,7 @@
       "category": "  Studios"
     },
     {
+      "id": 17,
       "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -173,6 +194,7 @@
       "category": "Residential"
     },
     {
+      "id": 18,
       "image": "https://i.ibb.co/HCcg5t6/a1.jpg      ",
       "title": "Townhouse for Sale",
       "location": "123 Ocean Avenue, Paradise City",
@@ -183,6 +205,7 @@
       "category": "Residential"
     },
     {
+      "id": 19,
       "image": "https://i.ibb.co/bgr6GvT/a11.jpg",
       "title": "Villa with Amazing View",
       "location": "123 Ocean Avenue, Paradise City",
@@ -193,6 +216,7 @@
       "category": "Condos"
     },
     {
+      "id": 20,
       "image": "https://i.ibb.co/52ZB0JC/a10.jpg ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -203,6 +227,8 @@
       "category": "Sale"
     },
     {
+      "id": 21,
+
       "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
       "title": "Townhouse for Sale",
       "location": "123 Ocean Avenue, Paradise City",
@@ -213,6 +239,7 @@
       "category": "Shop"
     },
     {
+      "id": 21,
       "image": "https://i.ibb.co/kmPzFM6/3-2-525x328.jpg",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -223,6 +250,8 @@
       "category": "Sale"
     },
     {
+      "id": 22,
+
       "image": "https://i.ibb.co/JmxvdCs/a9.webp",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -233,6 +262,7 @@
       "category": "Apartment"
     },
     {
+      "id": 23,
       "image": "https://i.ibb.co/WfzTTPQ/a7.webp      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -243,6 +273,8 @@
       "category": "Commercial"
     },
     {
+      "id": 24,
+
       "image": "https://i.ibb.co/xqgXhQk/a6.webp      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -253,6 +285,8 @@
       "category": "Rent"
     },
     {
+      "id": 25,
+
       "image": "https://i.ibb.co/CP2Ch08/a5.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -263,6 +297,8 @@
       "category": "Residential"
     },
     {
+      "id": 26,
+
       "image": "https://i.ibb.co/16N0tHP/a4.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -273,6 +309,8 @@
       "category": "  Studios"
     },
     {
+      "id": 27,
+
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -283,6 +321,8 @@
       "category": "Residential"
     },
     {
+      "id": 28,
+
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -293,6 +333,8 @@
       "category": "Sale"
     },
     {
+      "id": 29,
+
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -303,6 +345,8 @@
       "category": "Rent"
     },
     {
+      "id": 30,
+
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -314,6 +358,8 @@
     },
     
     {
+      "id": 31,
+
       "image": "https://i.ibb.co/wJF70KL/a3.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -324,6 +370,8 @@
       "category": "Commercial"
     },
     {
+      "id": 32,
+
       "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
       "title": "Gorgeous Condo in Denver",
       "location": "123 Ocean Avenue, Paradise City",
@@ -335,6 +383,8 @@
     },
     
     {
+      "id": 33,
+
       "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
       "title": "Townhouse for Sale",
       "location": "123 Ocean Avenue, Paradise City",
@@ -345,6 +395,8 @@
       "category": "  Studios"
     },
     {
+      "id": 34,
+
       "image": "https://i.ibb.co/FxF0w5B/a2.jpg      ",
       "title": "Luxurious Beachfront Villa",
       "location": "123 Ocean Avenue, Paradise City",
@@ -355,6 +407,8 @@
       "category": "Residential"
     },
     {
+      "id": 35,
+
       "image": "https://i.ibb.co/HCcg5t6/a1.jpg      ",
       "title": "Townhouse for Sale",
       "location": "123 Ocean Avenue, Paradise City",

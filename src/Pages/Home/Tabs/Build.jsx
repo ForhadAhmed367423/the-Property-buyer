@@ -1,7 +1,8 @@
 import { GrFavorite } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Build = ({ house }) => {
-    const { image, title, location, agent_name, agent_image, status, price, category } = house;
+    const {_id, image, title, location, agent_name, agent_image, status, price, category } = house;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img className="relative " src={image} alt="Shoes" /></figure>
@@ -25,7 +26,7 @@ const Build = ({ house }) => {
                     <p className="text-[#C28864] font font-bold text-lg">{price}</p>
                 </div>
                 <div className="card-actions justify-center mt-4 ">
-                    <button className="primaryBtn btn-wide">Details</button>
+                    <Link to={`/details/${_id}`} ><button className="primaryBtn btn-wide">Details</button> </Link>
                 </div>
             </div>
         </div>

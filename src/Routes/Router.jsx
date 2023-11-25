@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import BuildDetails from "../Pages/Home/Tabs/BuildDetails";
 
 const router = createBrowserRouter([
     {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
         {
           path:'/',
           element:<Home></Home>,
-          loader: ()=>fetch('items.json')
+          loader: ()=>fetch('http://localhost:8085/items')
         },
         {
           path:'/login',
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
         {
           path:'/signup',
           element:<SignUp></SignUp>
+        },
+        {
+          path:'/details/:id',
+          element:<BuildDetails></BuildDetails>,
+          loader:({params})=>fetch(`http://localhost:8085/items/${params.id}`)
         }
 
       ]
