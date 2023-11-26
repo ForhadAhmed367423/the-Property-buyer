@@ -13,7 +13,7 @@ const Navbar = () => {
         <li><Link className="hub  font">Home</Link></li>
 
         <li><Link to={'/allproperty'} className="hub font">All properties</Link></li>
-        <li><Link to={'/dashboard'} className="hub font">Dashboard</Link></li>
+        <li><Link to={'/dashboard/profile'} className="hub font">Dashboard</Link></li>
     </>
     return (
         <div>

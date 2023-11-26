@@ -10,6 +10,8 @@ import Profile from "../Pages/Dashboard/DashComp/Profile";
 import Wishlist from "../Pages/Dashboard/DashComp/Wishlist";
 import Property from "../Pages/Dashboard/DashComp/Property ";
 import Reviews from "../Pages/Dashboard/DashComp/Reviews";
+import PrivetRoutes from "./PrivetRoutes";
+import MakeOffer from "../Pages/Dashboard/MakeOffer/MakeOffer";
 
 const router = createBrowserRouter([
   {
@@ -39,32 +41,38 @@ const router = createBrowserRouter([
         element: <AllPropertys></AllPropertys>,
         loader: () => fetch('http://localhost:5000/items')
       },
-      {
-        path: '/dashboard',
-        element: <Dashboard></Dashboard>,
-        children: [
-          {
-            path: 'profile',
-            element: <Profile />
-          },
-          {
-            path: 'wishlist',
-            element: <Wishlist />
-          },
-          {
-            path: 'property',
-            element: <Property />
-          },
-          {
-            path: 'reviews',
-            element: <Reviews />
-          },
-
-        ]
-      }
-
 
     ]
   },
+  {
+    path: '/dashboard',
+    element: <PrivetRoutes><Dashboard></Dashboard></PrivetRoutes>,
+    children: [
+      {
+        path: 'profile',
+        element: <Profile />
+      },
+      {
+        path: 'wishlist',
+        element: <Wishlist />,
+      },
+      {
+        path: 'property',
+        element: <Property />
+      },
+      {
+        path: 'reviews',
+        element: <Reviews />
+      },
+      {
+        path:'wishlist/makeoffer/:id',
+        element:<MakeOffer></MakeOffer>,
+        loader: ({ params }) => fetch(`http://localhost:5000/ToWishlist/${params.id}`)
+      }
+
+    ]
+  }
+
+
 ]);
 export default router;

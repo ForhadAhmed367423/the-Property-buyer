@@ -2,7 +2,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaShareAlt } from "react-icons/fa";
 import { GrFavorite } from "react-icons/gr";
 import { IoIosPrint } from "react-icons/io";
-import { useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -15,15 +15,49 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProviders";
+import useAxiosPublic from "../../../useAxiosPublic ";
+import Swal from "sweetalert2";
 
 
 
 const BuildDetails = () => {
-
-    
+    const { user } = useContext(AuthContext);
     const item = useLoaderData();
+    const secure = useAxiosPublic();
+    const { _id,image, title, location, agent_name, agent_image, status, price, category } = item;
 
-    const { image, title, location, agent_name, agent_image, status, price, category } = item;
+    const handleWish=()=>{
+        const wishListData = {
+            image,
+            title,
+            agent_image,
+            agent_name,
+            location,
+            price,
+            status,
+            propertyId:_id,
+            wishedEmail:user.email,
+      
+          };
+          secure.post('/addToWishlist',wishListData)
+        .then(res=> {
+          if(res.data.insertedId){
+            Swal.fire({
+                title: "Great!",
+                text: "Wishlist Added Successfully!",
+                icon: "success"
+              });
+            Navigate('/dashboard/wishlist')
+    
+          }
+        })
+    }
+        
+
+    // const item = useLoaderData();
+
 
 
     return (
@@ -79,7 +113,7 @@ const BuildDetails = () => {
                     <h2 className="text-center font-bold font text-lg my-5">Description</h2>
                     <p className="font font-semibold">Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage. Master bedroom includes both a standard closet and custom closet wall unit.Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer.</p>
                     <div className="flex justify-center ">
-                        <button className="text-center btn ">        <span>Add To Wishlist</span> <GrFavorite /></button>
+                        <button onClick={()=>handleWish()} className="text-center btn ">        <span>Add To Wishlist</span> <GrFavorite /></button>
 
                     </div>
                 </div>
