@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import SocialLog from "../Shared/Social/SocialLog";
 
 
 
@@ -46,15 +47,13 @@ const SignUp = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
-      {/* <Helmet>
-        <title>Bistro Boss | Sign Up</title>
-      </Helmet> */}
+
       <div className="hero-content flex-col lg:flex">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Sign Up now!</h1>
           <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
         </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -105,10 +104,14 @@ const SignUp = () => {
                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
               </label>
             </div>
-            <div className="form-control mt-6">
-              <input className="btn btn-primary" type="submit" value="Sign Up" />
+            <div className="form-control mt-4">
+              <input className="primaryBtn btn" type="submit" value="Sign Up" />
             </div>
           </form>
+          <div className="divider mt-1 h-0 ">OR</div>
+          <div className="form-control ">
+          <SocialLog/>
+          </div>
         </div>
       </div>
     </div>

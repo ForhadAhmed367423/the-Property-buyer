@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { loadCaptchaEnginge, LoadCanvasTemplate,validateCaptcha } from 'react-simple-captcha';
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProviders";
+import SocialLog from "../Shared/Social/SocialLog";
 
 const Login = () => {
     const [disabled,setDisabled]= useState(true);
@@ -58,7 +59,7 @@ const Login = () => {
       <h1 className="text-5xl  font-bold">Login now!</h1>
       <p className="py-6 ">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
     </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
       <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -71,22 +72,28 @@ const Login = () => {
             <span className="label-text">Password</span>
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered"  />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-            <p>New here? <Link to={'/signup'}>SingUp</Link></p>
-          </label>
+
         </div>
         <div className="flex flex-col">
           <label className="label">
           <LoadCanvasTemplate />
          </label>
-          <input type="text" onBlur={handleValidate} name="captcha" placeholder="type the text above" className="input input-bordered" required />
+          <input type="text" onBlur={handleValidate} name="captcha" placeholder="Type here the captcha text" className="input input-bordered" required />
           <br />
         </div>
         <div className="form-control mt-6">
-          <input disabled={disabled} type="submit" className="btn btn-primary" value="Login" />
+          <input disabled={disabled} type="submit" className="btn primaryBtn" value="Login" />
         </div>
       </form>
+      <div className="divider mt-1">OR</div>
+
+      <div className="form-control ">
+        <SocialLog/>
+        <label className="flex items-center justify-center gap-2 my-4">
+            <a href="#" className="label-text-alt link link-hover font text-base ">Forgot password?</a>
+            <p className="font">New here? <Link to={'/signup'}>SingUp</Link></p>
+          </label>
+        </div>
     </div>
   </div>
 </div>
