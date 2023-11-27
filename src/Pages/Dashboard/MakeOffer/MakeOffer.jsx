@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const MakeOffer = () => {
     const item = useLoaderData();
-    const { agent_image, agent_name, title, image, location, wishedEmail, price } = item;
+    const { agent_image, agent_name, title, image, location, wishedEmail } = item;
     console.log(item)
 
     const handleSubmit = (event) => {

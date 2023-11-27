@@ -5,11 +5,13 @@ import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import SocialLog from "../Shared/Social/SocialLog";
+import useAxiosPublic from "../../useAxiosPublic ";
 
 
 
 
 const SignUp = () => {
+  const axiosPublic = useAxiosPublic();
   const {
     register,
     handleSubmit,
@@ -17,32 +19,45 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const {createUser,updateUserProfile} = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const onSubmit = (data) =>{ console.log(data)
-  createUser(data.email , data.password)
-  .then(result=>{
-    const logged= result.user;
-    console.log(logged);
-    updateUserProfile(data.name, data.photo)
-  
-    .then(()=>{
-      console.log("user profile info updated successfully")
-    })
-    .catch(error=>{
-      console.log(error)
-    });
-    reset();
-    Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "User created successfully",
-      showConfirmButton: false,
-      timer: 1000
-    });
-  })
-  navigate('/');
+  const onSubmit = (data) => {
+    console.log(data)
+    createUser(data.email, data.password)
+      .then(result => {
+        const logged = result.user;
+        console.log(logged);
+        updateUserProfile(data.name, data.photo)
+
+          .then(() => {
+            const userInfo = {
+              name: data.name,
+              email: data.email
+            }
+            axiosPublic.post('/user', userInfo)
+              .then(res => {
+                if (res.data.insertedId) {
+                  reset();
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User created successfully",
+                    showConfirmButton: false,
+                    timer: 1000
+                  });
+                }
+              })
+              navigate('/');
+
+          })
+          .catch(error => {
+            console.log(error)
+          });
+
+
+
+      })
   }
 
   return (
@@ -59,7 +74,7 @@ const SignUp = () => {
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
-              <input type="text" placeholder="name" {...register("name", { required: true })} name="name" className="input input-bordered"  />
+              <input type="text" placeholder="name" {...register("name", { required: true })} name="name" className="input input-bordered" />
               {errors.name && <span className="text-red-500">This field is required <span className="text-red-600 font-bold">*</span></span>}
 
             </div>
@@ -67,7 +82,7 @@ const SignUp = () => {
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
-              <input type="email" placeholder="email" {...register("email", { required: true })} name="email" className="input input-bordered"  />
+              <input type="email" placeholder="email" {...register("email", { required: true })} name="email" className="input input-bordered" />
               {errors.email && <span className="text-red-500">This field is required <span className="text-red-600 font-bold">*</span></span>}
 
             </div>
@@ -75,7 +90,7 @@ const SignUp = () => {
               <label className="label">
                 <span className="label-text">Photo</span>
               </label>
-              <input type="photoUrl " placeholder="Photo" {...register("photo", { required: true })} name="photo"  className="input input-bordered"  />
+              <input type="photoUrl " placeholder="Photo" {...register("photo", { required: true })} name="photo" className="input input-bordered" />
               {errors.photo && <span className="text-red-500">This field is required <span className="text-red-600 font-bold">*</span></span>}
 
             </div>
@@ -83,9 +98,11 @@ const SignUp = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input type="password" placeholder="password" {...register("password", { required: true, maxLength: 15, 
-                pattern:/(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
-                ,minLength: 8 })} name="password" className="input input-bordered"  />
+              <input type="password" placeholder="password" {...register("password", {
+                required: true, maxLength: 15,
+                pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
+                , minLength: 8
+              })} name="password" className="input input-bordered" />
               {errors.password?.type === "required" && (
                 <p className="text-red-600">Password is required</p>
               )}
@@ -110,7 +127,7 @@ const SignUp = () => {
           </form>
           <div className="divider mt-1 h-0 ">OR</div>
           <div className="form-control ">
-          <SocialLog/>
+            <SocialLog />
           </div>
         </div>
       </div>

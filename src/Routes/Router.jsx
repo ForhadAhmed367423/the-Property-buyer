@@ -12,6 +12,7 @@ import Property from "../Pages/Dashboard/DashComp/Property ";
 import Reviews from "../Pages/Dashboard/DashComp/Reviews";
 import PrivetRoutes from "./PrivetRoutes";
 import MakeOffer from "../Pages/Dashboard/MakeOffer/MakeOffer";
+import ManageUser from "../Pages/Dashboard/Admin/ManageUser";
 
 const router = createBrowserRouter([
   {
@@ -68,7 +69,16 @@ const router = createBrowserRouter([
         path:'wishlist/makeoffer/:id',
         element:<MakeOffer></MakeOffer>,
         loader: ({ params }) => fetch(`http://localhost:5000/ToWishlist/${params.id}`)
-      }
+      },
+
+      // Admin routes here
+       {
+        path:'manageUser',
+        element:<ManageUser/>
+       },
+       {
+        
+       }
 
     ]
   }

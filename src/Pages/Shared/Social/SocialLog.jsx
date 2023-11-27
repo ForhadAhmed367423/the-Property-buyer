@@ -2,18 +2,27 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProviders";
 import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
+import useAxiosSecure from "../../../Hook/useAxiosSecure";
 
 
 const SocialLog = () => {
     const  {googleSignIn}= useContext(AuthContext);
     const navigate = useNavigate();
+    const axiosSecure= useAxiosSecure();
 
     const handleGoogle = ()=>{
             googleSignIn()
             .then(res=>{
                 console.log(res)
                 navigate('/')
-
+                const userInfo={
+                    email: res.user?.email,
+                    name: res.user?.displayName
+                }
+                axiosSecure.post('/user',userInfo)
+                .then(response=>{
+                    console.log(response.data)
+                })
             })
     }
     return (
