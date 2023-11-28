@@ -2,11 +2,36 @@ import { Link } from "react-router-dom";
 import useWishData from "../../../Hook/useWishData";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { MdLocalOffer } from "react-icons/md";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../../../useAxiosPublic ";
 
 
 
 const Wishlist = () => {
     const [wishData]= useWishData();
+    const axiosPublic = useAxiosPublic();
+
+    const handleDeleteWish= wish =>{
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                axiosPublic.delete(`/ToWishlist/${wish._id}`)
+                
+              Swal.fire({
+                title: "Deleted!",
+                text:  `${wish.title} has been deleted`,
+                icon: "success"
+              });
+            }
+          });
+    }
     console.log(wishData)
 
     return (
@@ -35,7 +60,7 @@ const Wishlist = () => {
                             
                                 <div className=" flex gap-4">
                                 <Link to={`makeoffer/${wish._id} `} className=" my-4 primaryBtn font"><span className="flex gap-2 items-center"><MdLocalOffer/>Make A Offer</span> </Link>
-                                <Link to={'/login'} className=" my-4 primaryBtn font"> <span className="flex gap-2 items-center"><FaRegTrashCan></FaRegTrashCan>Remove</span> </Link>
+                                <button onClick={()=>handleDeleteWish(wish)} className=" my-4 primaryBtn font"> <span className="flex gap-2 items-center"><FaRegTrashCan></FaRegTrashCan>Remove</span> </button>
                                 </div>
                         </div>
                     </div>

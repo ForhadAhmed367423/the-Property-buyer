@@ -69,8 +69,7 @@ const ManageUser = () => {
         <div className="w-3/4 my-7 ml-[300px] pr-8 pl-20">
 
             <div >
-                <div className="flex justify-between">
-                <p className="text-4xl">ALL USers</p>
+                <div className="flex mb-6">
                 <p className="text-4xl">TOTAL USers: {user.length}</p>
 
                 </div>

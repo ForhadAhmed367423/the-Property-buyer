@@ -15,6 +15,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useLoaderData } from 'react-router-dom/dist';
 import Build from '../Home/Tabs/Build';
+import Banner from '../Home/Banner/Banner';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -82,7 +83,7 @@ const AllPropertys = () => {
 
     return (
         <>
-        
+            <Banner/>
             <div className="container mx-auto">
                 <Box sx={{ width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
