@@ -1,20 +1,70 @@
-import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../../../Hook/useAxiosSecure";
+
 import { FaRegTrashCan, FaUsersGear } from "react-icons/fa6";
+import Swal from "sweetalert2";
+import AllUserHook from "../../../Hook/AllUserHook";
+import useAxiosSecure from "../../../Hook/useAxiosSecure";
+
 
 
 const ManageUser = () => {
-    const handleDeleteUser= ()=>{
-
-    }
+   
     const axiosSecure = useAxiosSecure();
-    const { data: user = [] } = useQuery({
-        queryKey: ['user'],
-        queryFn: async () => {
-            const res = await axiosSecure.get('/user')
-            return res.data
-        }
-    })
+    // const { data: user = [],refetch } = useQuery({
+    //     queryKey: ['user'],
+    //     queryFn: async () => {
+    //         const res = await axiosSecure.get('/user')
+    //         return res.data;
+    //     }
+        
+    // })
+    const [user,refetch]= AllUserHook();
+    console.log(user)
+    
+
+
+    const handleDeleteUser= man =>{
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.delete(`/user/${man._id}`)
+                refetch()
+                
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+              });
+            }
+          });
+    }
+
+
+
+    const handleAdmin = man =>{
+        console.log(man ,"handle admin")
+        axiosSecure.patch(`/user/admin/${man._id}`)
+        .then(res=>{
+            console.log(res.data)
+            if(res.data.modifiedCount>0){
+                refetch()
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${man.name} Is An Admin Now`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+        })
+    }
+
     return (
         <div className="w-3/4 my-7 ml-[300px] pr-8 pl-20">
 
@@ -22,6 +72,7 @@ const ManageUser = () => {
                 <div className="flex justify-between">
                 <p className="text-4xl">ALL USers</p>
                 <p className="text-4xl">TOTAL USers: {user.length}</p>
+
                 </div>
 
                 <div>
@@ -48,10 +99,11 @@ const ManageUser = () => {
                                     <td>{man._id}</td>
                                     <td>
 
-                                    <button onClick={()=>handleDeleteUser(user)} className=" my-4 btn bg-[#BC8664] text-white  font text-lg hover:bg-[#a1633d]"> <FaUsersGear/> </button>
+                                    {man.role ==='admin' ? 'Admin' :
+                                        <button onClick={()=>handleAdmin(man)} className=" my-4 btn bg-[#BC8664] text-white  font text-lg hover:bg-[#a1633d]"> <FaUsersGear/> </button>}
                                     </td>
                                     <td>
-                                    <button onClick={()=>handleDeleteUser(user)} className=" my-4 btn hover:bg-red-700 bg-red-600 text-white  font"> <FaRegTrashCan></FaRegTrashCan> </button>
+                                    <button onClick={()=>handleDeleteUser(man)} className=" my-4 btn hover:bg-red-700 bg-red-600 text-white  font"> <FaRegTrashCan></FaRegTrashCan> </button>
                                     </td>
                                 </tr>))
                                 }
