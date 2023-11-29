@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProviders";
+import useProfile from "../../../Hook/useProfile";
 // import AllUserHook from "../../../Hook/AllUserHook";
 
 const AdminProfile = () => {
     const { user } = useContext(AuthContext);
     // const [users]= AllUserHook({});
     // console.log(users.role)
+    const [oneUser] = useProfile();
     
 
     return (
@@ -31,7 +33,7 @@ const AdminProfile = () => {
                         }</span>
                     </h1>
                     <p className="font-semibold font text-xl ">Email : <span className="link link-hover">{user?.email}</span> </p>
-                    <p className="font-semibold font text-xl">Role : {user?.role}</p>
+                    <p className="font-semibold font text-xl">Role : {oneUser?.role}</p>
                     </div>
                 </div>
             </div>

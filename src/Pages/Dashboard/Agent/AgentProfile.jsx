@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProviders";
+import useProfile from "../../../Hook/useProfile";
 
 const AgentProfile = () => {
     const { user } = useContext(AuthContext);
+    const [oneUser] = useProfile();
     
 
     return (
@@ -28,7 +30,7 @@ const AgentProfile = () => {
                             }</span> 
                          </h1>
                         <p className="font-semibold font text-xl ">Email : <span className="link link-hover">{user?.email}</span> </p>
-                        <p className="font-semibold font text-xl ">Role : <span className="link link-hover">{user?.role}</span> </p>
+                        <p className="font-semibold font text-xl ">Role : <span className="link link-hover">{oneUser?.role}</span> </p>
 
                     </div>
                 </div>

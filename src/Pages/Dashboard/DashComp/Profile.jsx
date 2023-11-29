@@ -28,9 +28,7 @@ const Profile = () => {
                             user?.displayName
                         }</span>
                     </h1>
-                    <p className="font-semibold font text-xl ">Email : <span className="link link-hover">{user?.email}</span> </p>
-                    <p className="font-semibold font text-xl ">Role : <span className="link link-hover">{user?.role}</span> </p>
-                    
+                    <p className="font-semibold font text-xl ">Email : <span className="link link-hover">{user?.email}</span> </p>                    
                     </div>
                 </div>
             </div>
