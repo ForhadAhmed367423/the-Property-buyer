@@ -13,8 +13,8 @@ const Home = () => {
     return (
         <>
         <HomeBanner/>
-            <div className="container mx-auto my-6 ">
-                <h1 className="text-5xl my-10 text-[#C28864] font font-bold text-center">Featured Collections</h1>
+            <div className="container mx-auto my-8 ">
+                <h1 className="text-5xl my-20 text-[#C28864] font font-bold text-center">Featured Collections</h1>
                 <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
                     {
                         advertisement.map(house => <Build

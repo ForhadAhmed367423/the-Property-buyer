@@ -4,7 +4,7 @@ import { AuthContext } from "../providers/AuthProviders";
 import { HashLoader } from "react-spinners";
 import { Navigate } from "react-router-dom";
 
-const AdminRoute = (children) => {
+const AdminRoute = ({children}) => {
     const [isAdmin, isAdminLoading] = useAdmin();
     const { user, loading } = useContext(AuthContext);
     if (loading || isAdminLoading) {

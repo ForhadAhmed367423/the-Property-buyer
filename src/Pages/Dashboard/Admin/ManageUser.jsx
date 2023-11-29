@@ -17,8 +17,8 @@ const ManageUser = () => {
     //     }
         
     // })
-    const [user,refetch]= AllUserHook();
-    console.log(user)
+    const [users,refetch]= AllUserHook();
+    console.log(users)
     
 
 
@@ -70,7 +70,7 @@ const ManageUser = () => {
 
             <div >
                 <div className="flex mb-6">
-                <p className="text-4xl">TOTAL USers: {user.length}</p>
+                <p className="text-4xl">TOTAL USers: {users.length}</p>
 
                 </div>
 
@@ -91,7 +91,7 @@ const ManageUser = () => {
                             <tbody>
                                 {/* row 1 */}
                                 {
-                                    user.map((man,index)=> (<tr key={man._id} className="hover text-center">
+                                    users.map((man,index)=> (<tr key={man._id} className="hover text-center">
                                     <th>{index+1}</th>
                                     <td>{man.name}</td>
                                     <td>{man.email}</td>

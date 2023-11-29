@@ -13,6 +13,10 @@ import Reviews from "../Pages/Dashboard/DashComp/Reviews";
 import PrivetRoutes from "./PrivetRoutes";
 import MakeOffer from "../Pages/Dashboard/MakeOffer/MakeOffer";
 import ManageUser from "../Pages/Dashboard/Admin/ManageUser";
+import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile";
+import AdminRoute from "./AdminRoute";
+import MyAddedProp from "../Pages/Dashboard/Agent/MyAddedProp";
+import AgentProfile from "../Pages/Dashboard/Agent/AgentProfile";
 
 const router = createBrowserRouter([
   {
@@ -39,11 +43,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/allproperty',
-        element: <AllPropertys></AllPropertys>,
+        element: <PrivetRoutes><AllPropertys></AllPropertys></PrivetRoutes>,
         loader: () => fetch('http://localhost:5000/items')
       },
 
-    ]
+    ] 
   },
   {
     path: '/dashboard',
@@ -77,7 +81,15 @@ const router = createBrowserRouter([
         element:<ManageUser/>
        },
        {
-        
+        path:'adminProfile',
+        element:<AdminRoute><AdminProfile></AdminProfile></AdminRoute>
+       },{
+        path:"myAddedProp",
+        element:<MyAddedProp/>
+       },
+       {
+        path:'agentProfile',
+        element:<AgentProfile/>
        }
 
     ]

@@ -3,7 +3,7 @@ import useAxiosSecure from "./useAxiosSecure";
 
 const AllUserHook = () => {
     const axiosSecure = useAxiosSecure();
-    const { data: user = [], refetch } = useQuery({
+    const { data: users = [], refetch } = useQuery({
         queryKey: ['user'],
         queryFn: async () => {
             const res = await axiosSecure.get('/user')
@@ -11,7 +11,7 @@ const AllUserHook = () => {
         }
         
     })
-    return [user,refetch]
+    return [users,refetch]
 };
 
 export default AllUserHook;
