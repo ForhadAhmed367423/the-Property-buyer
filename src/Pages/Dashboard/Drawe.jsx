@@ -6,6 +6,7 @@ import { MdOutlineRateReview } from "react-icons/md";
 import { HiHomeModern } from "react-icons/hi2";
 import { FaUsersGear } from "react-icons/fa6";
 import useAdmin from "../../Hook/useAdmin";
+import useAgent from "../../Hook/useAgent";
 
 
 
@@ -14,7 +15,7 @@ import useAdmin from "../../Hook/useAdmin";
 
 const Drawe = () => {
     const [isAdmin] = useAdmin();
-    const isAgent = true;
+    const [isAgent] = useAgent();
     return (
         <div className="fixed">
             <div className="drawer drawer-open lg:w-[300px] min-h-screen ">

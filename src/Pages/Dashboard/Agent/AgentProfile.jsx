@@ -3,6 +3,7 @@ import { AuthContext } from "../../../providers/AuthProviders";
 
 const AgentProfile = () => {
     const { user } = useContext(AuthContext);
+    
 
     return (
         <div className="w-3/4 my-7 ml-[300px]">
@@ -24,8 +25,8 @@ const AgentProfile = () => {
                         <h1 className="font-semibold font text-xl">Name :
                             <span className="font-bold"> {
                                 user?.displayName
-                            }</span>
-                        </h1>
+                            }</span> 
+                         </h1>
                         <p className="font-semibold font text-xl ">Email : <span className="link link-hover">{user?.email}</span> </p>
                         <p className="font-semibold font text-xl ">Role : <span className="link link-hover">{user?.role}</span> </p>
 
