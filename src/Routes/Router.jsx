@@ -17,6 +17,7 @@ import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile";
 import AdminRoute from "./AdminRoute";
 import MyAddedProp from "../Pages/Dashboard/Agent/MyAddedProp";
 import AgentProfile from "../Pages/Dashboard/Agent/AgentProfile";
+import ManageProp from "../Pages/Dashboard/Admin/ManageProp";
 
 const router = createBrowserRouter([
   {
@@ -88,9 +89,13 @@ const router = createBrowserRouter([
         element:<MyAddedProp/>
        },
        {
-        path:'agentProfile',
-        element:<AgentProfile/>
-       }
+         path:'manageProp',
+         element:<ManageProp></ManageProp>
+       },
+         {
+          path:'agentProfile',
+          element:<AgentProfile/>
+         },
 
     ]
   }
