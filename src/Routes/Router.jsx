@@ -110,7 +110,7 @@ const router = createBrowserRouter([
           element:<AddNewProp/>
          },
          {
-          path:'myAddEdit',
+          path:'myAddedProp/myAddEdit/:id',
           element:<MyAddEdit/>
          }
 

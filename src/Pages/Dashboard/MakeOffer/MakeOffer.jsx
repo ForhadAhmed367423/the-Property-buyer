@@ -23,8 +23,9 @@ const MakeOffer = () => {
         const price = form.price.value;
         const date = form.date.value;
         const userName = form.user_name.value;
+        const status = 'pending'
 
-        const propertyData = { image, name, agent_name, agent_image, location, user_email, price, date,userName };
+        const propertyData = { image, name, agent_name, agent_image, location, user_email, price, date,userName,status };
         console.log(propertyData);
 
         fetch("http://localhost:5000/makeoffer",{

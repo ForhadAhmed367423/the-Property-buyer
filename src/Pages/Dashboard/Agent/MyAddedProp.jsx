@@ -19,6 +19,7 @@ const MyAddedProp = () => {
                             <th>Agent Name</th>
                             <th>offered price</th>
                             <th>Category</th>
+                            <th>Update</th>
                             
                         </tr>
                     </thead>
@@ -46,8 +47,8 @@ const MyAddedProp = () => {
 
 
                                 <td>
-                                  <Link to={'/myAddEdit'}>
-                                  <button>Edit</button>
+                                  <Link to={`myAddEdit/${item._id}`}>
+                                  <button className="btn btn-xs">Update</button>
                                   </Link>
                                   
                                   </td>

@@ -2,6 +2,7 @@
 import { useLoaderData } from "react-router-dom";
 import Build from "../Tabs/Build";
 import HomeBanner from "../HomeBanner/HomeBanner";
+import OurAgent from "../OurAgent";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            <OurAgent/>
 
         </>
 

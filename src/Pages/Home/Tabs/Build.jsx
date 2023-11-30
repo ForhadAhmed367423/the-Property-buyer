@@ -31,8 +31,8 @@ const Build = ({ house }) => {
                     <p>{location}</p>
                 </div>
                 <div className="flex gap-4 ">
-                    <p className="text-[#C28864] font font-bold text-lg">{Max_price}</p>
-                    <p className="text-[#C28864] font font-bold text-lg">-  {Min_Price}</p>
+                    <p className="text-[#C28864] font font-bold text-lg">Max Price: {Max_price}</p>
+                    <p className="text-[#C28864] font font-bold text-lg">Min Price: {Min_Price}</p>
                 </div>
                 <div className="card-actions justify-center mt-4 ">
                     <Link to={`/details/${_id}`} ><button className="primaryBtn btn-wide">Details</button> </Link>

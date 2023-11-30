@@ -26,7 +26,7 @@ const BuildDetails = () => {
     const { user } = useContext(AuthContext);
     const item = useLoaderData();
     const secure = useAxiosPublic();
-    const { _id,image, title, location, agent_name, agent_image, status, Max_price,Min_price, category } = item;
+    const { _id,image, title, location, agent_name, agent_image, status, Max_price,Min_Price, category } = item;
 
     const handleWish=()=>{
         const wishListData = {
@@ -36,7 +36,7 @@ const BuildDetails = () => {
             agent_name,
             location,
             Max_price,
-            Min_price,
+            Min_Price,
             status,
             propertyId:_id,
             wishedEmail:user.email,
@@ -76,8 +76,9 @@ const BuildDetails = () => {
                         <p>{location}</p>
                     </div>
                 </div>
-                <div>
-                    <h1 className="text-3xl font font-bold my-10 text-[#C28864]">{Max_price}</h1>
+                <div className=" gap-10">
+                    <h1 className="text-3xl font font-bold my-10 text-[#C28864]">${Max_price}   -   ${Min_Price}</h1>
+                    
                     <div className="flex gap-2 items-center justify-end">
                         <FaShareAlt />
                         <button className="">Share</button>
