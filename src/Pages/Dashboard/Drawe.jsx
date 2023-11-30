@@ -7,6 +7,8 @@ import { HiHomeModern } from "react-icons/hi2";
 import { FaUsersGear } from "react-icons/fa6";
 import useAdmin from "../../Hook/useAdmin";
 import useAgent from "../../Hook/useAgent";
+import { MdAddHomeWork } from "react-icons/md";
+
 
 
 
@@ -45,7 +47,8 @@ const Drawe = () => {
                                         <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><NavLink className="flex items-center gap-2 active" to={'agentProfile'}><CgProfile /><span>Agent Profile</span></NavLink ></li>
                                         <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'myAddedProp'} className="flex items-center gap-2"><GoHeart /><span>My added properties</span></Link></li>
                                         <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'myAddedProp'} className="flex items-center gap-2"><RiHomeOfficeLine /><span>My sold properties</span></Link></li>
-                                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'reviews'} className="flex items-center gap-2"><MdOutlineRateReview /><span>Requested properties</span></Link></li>
+                                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'reqProp'} className="flex items-center gap-2"><MdOutlineRateReview /><span>Requested properties</span></Link></li>
+                                        <li className="bg-[#FFFFFF] p-2 hover:bg-slate-200 rounded-lg mb-3 font font-semibold"><Link to={'addNewProp'} className="flex items-center gap-2"><MdAddHomeWork /><span>Add properties</span></Link></li>
                                     </>:
                                     <>
                                         <h2 className="text-center text-2xl font font-bold mb-6 text-white">User Dashboard</h2>

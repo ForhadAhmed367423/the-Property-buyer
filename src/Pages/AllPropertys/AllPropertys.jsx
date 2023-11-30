@@ -85,7 +85,7 @@ const AllPropertys = () => {
         <>
             <Banner/>
             <div className="container mx-auto">
-                <Box sx={{ width: '100%' }}>
+                <Box sx={{ width: '80%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                             <Tab className='hover:text-[#BC8664]' label="For Sale" icon={<FaHome fontSize="large" />}  {...a11yProps(0)} />
@@ -104,7 +104,7 @@ const AllPropertys = () => {
                         </Tabs>
                     </Box>
                     <CustomTabPanel value={value} index={0}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab1.map(house => <Build
                                     key={house._id}
@@ -115,7 +115,7 @@ const AllPropertys = () => {
                     </CustomTabPanel>
 
                     <CustomTabPanel value={value} index={1}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab2.map(house => <Build
                                     key={house._id}
@@ -125,7 +125,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={2}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab3.map(house => <Build
                                     key={house._id}
@@ -135,7 +135,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={3}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab4.map(house => <Build
                                     key={house._id}
@@ -145,7 +145,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={4}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab5.map(house => <Build
                                     key={house._id}
@@ -155,7 +155,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={5}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab6.map(house => <Build
                                     key={house._id}
@@ -165,7 +165,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={6}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab7.map(house => <Build
                                     key={house._id}
@@ -175,7 +175,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={7}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab8.map(house => <Build
                                     key={house._id}
@@ -185,7 +185,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={8}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab9.map(house => <Build
                                     key={house._id}
@@ -195,7 +195,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={9}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab10.map(house => <Build
                                     key={house._id}
@@ -205,7 +205,7 @@ const AllPropertys = () => {
                         </div>
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={10}>
-                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1'>
+                        <div className='grid lg:grid-cols-3 gap-4 md:grid-cols-1 max-[425px]:mx-auto'>
                             {
                                 tab11.map(house => <Build
                                     key={house._id}

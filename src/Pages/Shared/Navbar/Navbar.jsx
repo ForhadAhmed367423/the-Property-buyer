@@ -13,11 +13,11 @@ const Navbar = () => {
         <li><Link className="hub  font">Home</Link></li>
 
         <li><Link to={'/allproperty'} className="hub font">All properties</Link></li>
-        <li><Link to={'/dashboard/profile'} className="hub font">Dashboard</Link></li>
+        <li><Link to={'/dashboard'} className="hub font">Dashboard</Link></li>
     </>
     return (
-        <div>
-            <div className="navbar bg-[#FFFFFF]">
+        <div className=" max-[425px]:w-[380px] max-[425px]:mx-auto">
+            <div className="navbar    bg-[#FFFFFF]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,16 +27,18 @@ const Navbar = () => {
 
                         {
                             navItem
+                            
                         }
-
+                        <button onClick={handleLogOut} className=" primaryBtn font" >logout</button>
                         </ul>
                     </div>
-                    <img src={logo} className="h-[90px] w-[200px]" alt="" />
+                    <img src={logo} className="lg:h-[90px] lg:w-[200px]  max-[425px]:h-[60px] max-[425px]:w-[120px]" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="flex justify-center gap-10 items-center px-1">
                         {
                             navItem
+
                         }
                     </ul>
                 </div>
@@ -44,9 +46,9 @@ const Navbar = () => {
                    
                     {
                         user ? <>
-                        <img src={user?.photoURL} className="hover:border-2 hover:border-[#BC8664] cursor-pointer  h-[50px] w-[50px] rounded-full mr-4" alt="" />
-                        <p className="font font-bold mr-3">{user?.displayName}</p>
-                        <button onClick={handleLogOut} className="mr-6 primaryBtn font" >logout</button>
+                        <img src={user?.photoURL} className="hover:border-2 hover:border-[#BC8664] cursor-pointer  h-[50px] w-[50px] rounded-full mr-4 max-[425px]:w-[30px] max-[425px]:h-[30px]" alt="" />
+                        <p className="font lg:font-bold max-[425px]:text-base  lg:mr-3 max-[425px]:hidden">{user?.displayName}</p>
+                        <button onClick={handleLogOut} className="mr-6 primaryBtn font max-[425px]:hidden" >logout</button>
                         </> :
                         <>
                         <Link to={'/login'} className="mr-6 primaryBtn font">Login</Link>

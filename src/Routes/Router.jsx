@@ -18,11 +18,16 @@ import AdminRoute from "./AdminRoute";
 import MyAddedProp from "../Pages/Dashboard/Agent/MyAddedProp";
 import AgentProfile from "../Pages/Dashboard/Agent/AgentProfile";
 import ManageProp from "../Pages/Dashboard/Admin/ManageProp";
+import ReqProp from "../Pages/Dashboard/Agent/ReqProp";
+import AddNewProp from "../Pages/Dashboard/Agent/AddNewProp";
+import MyAddEdit from "../Pages/Dashboard/Agent/MyAddEdit";
+// import ErrorPage from "../ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    // errorElement:<ErrorPage/>,
     children: [
       {
         path: '/',
@@ -96,6 +101,18 @@ const router = createBrowserRouter([
           path:'agentProfile',
           element:<AgentProfile/>
          },
+         {
+          path:'reqProp',
+          element:<ReqProp/>
+         },
+         {
+          path:'addNewProp',
+          element:<AddNewProp/>
+         },
+         {
+          path:'myAddEdit',
+          element:<MyAddEdit/>
+         }
 
     ]
   }

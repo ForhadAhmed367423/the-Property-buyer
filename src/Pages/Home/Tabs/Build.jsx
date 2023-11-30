@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 
 const Build = ({ house }) => {
-    const { _id, image, title, location, agent_name, agent_image, status, Max_price, category } = house;
+    const { _id, image, title, location, agent_name, agent_image, status, Max_price,Min_Price, category } = house;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card lg:w-96 max-[425px]:w-[400px] max-[425px]:ml-5 bg-base-100 shadow-xl">
             <figure>
                 <motion.div
                     className="box"
@@ -30,8 +30,9 @@ const Build = ({ house }) => {
                     <span className="badge border-[#C28864] w-[107px]">{status}</span>
                     <p>{location}</p>
                 </div>
-                <div className="card-actions ">
+                <div className="flex gap-4 ">
                     <p className="text-[#C28864] font font-bold text-lg">{Max_price}</p>
+                    <p className="text-[#C28864] font font-bold text-lg">-  {Min_Price}</p>
                 </div>
                 <div className="card-actions justify-center mt-4 ">
                     <Link to={`/details/${_id}`} ><button className="primaryBtn btn-wide">Details</button> </Link>

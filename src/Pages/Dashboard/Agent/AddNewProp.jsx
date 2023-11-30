@@ -1,58 +1,55 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProviders";
 
-const MakeOffer = () => {
-    const {user}=useContext(AuthContext);
-    const item = useLoaderData();
-    const { agent_image, agent_name, title, image, location, wishedEmail } = item;
-    console.log(item)
-
+const AddNewProp = () => {
+    const componentStyles = {
+        outline: 'none',
+        // other styles here
+    };
+    const { user } = useContext(AuthContext);
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const form = event.target;
         console.log(form);
         const image = form.image.value;
-        const name = form.name.value;
+        const title = form.title.value;
         const agent_name = form.agent_name.value;
         const agent_image = form.agent_image.value;
         const location = form.location.value;
         const user_email = form.user_email.value;
-        const price = form.price.value;
-        const date = form.date.value;
-        const userName = form.user_name.value;
+        const Max_price = form.Max_price.value;
+        const Min_Price = form.Min_Price.value;
+        const category = form.category.value;
 
-        const propertyData = { image, name, agent_name, agent_image, location, user_email, price, date,userName };
+        const propertyData = { image, title, agent_name, agent_image, location, user_email, Max_price, Min_Price, category };
         console.log(propertyData);
 
-        fetch("http://localhost:5000/makeoffer",{
-        method: "POST",
-        headers: {
-            "content-type" : "application/json",
-        },
-        body: JSON.stringify(propertyData),
+        fetch("http://localhost:5000/items", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(propertyData),
         })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            if (data.insertedId) {
-                Swal.fire({
-                    title: "Success!",
-                    text: "Offer added successfully.",
-                    icon: "success",
-                    confirmButtonText: "cool",
-                });
-            }
-        })
-        .catch((error) => {
-            console.error("There was a problem with the fetch operation:", error);
-        });
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Offer added successfully.",
+                        icon: "success",
+                        confirmButtonText: "cool",
+                    });
+                }
+            })
+            .catch((error) => {
+                console.error("There was a problem with the fetch operation:", error);
+            });
 
     }
-
-
     return (
         <div className="w-3/4  my-7 ml-[350px]">
             <div className="w-3/4 mx-auto">
@@ -74,8 +71,7 @@ const MakeOffer = () => {
                                     type="url"
                                     placeholder="image"
                                     name="image"
-                                    defaultValue={image}
-                                    readOnly
+
                                 />
                             </div>
 
@@ -86,10 +82,9 @@ const MakeOffer = () => {
                                 <input
                                     className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
                                     type="text"
-                                    placeholder="name"
-                                    name="name"
-                                    defaultValue={title}
-                                    readOnly
+                                    placeholder="title"
+                                    name="title"
+
                                 />
                             </div>
                         </div>
@@ -103,9 +98,10 @@ const MakeOffer = () => {
                                 <input
                                     className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
                                     type="text"
-                                    placeholder="Author Name"
-                                    defaultValue={agent_name}
-                                    name="agent_name" readOnly
+                                    placeholder="Agent Name"
+                                    name="agent_name"
+                                    defaultValue={user.displayName}
+
                                 />
                             </div>
                             <div >
@@ -117,19 +113,13 @@ const MakeOffer = () => {
                                     placeholder="Salary Range "
                                     type="email"
                                     name="user_email"
-                                    defaultValue={wishedEmail}
-                                    readOnly
+                                    defaultValue={user.email}
                                 />
-                                <input
-                                    className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
-                                    placeholder="Salary Range "
-                                    type="email"
-                                    name="user_name"
-                                    defaultValue={user.displayName}
-                                    readOnly
-                                />
+
                             </div>
                         </div>
+
+
                         <div className="flex gap-[50px] mb-8">
 
                             <div>
@@ -139,9 +129,11 @@ const MakeOffer = () => {
                                 <input
                                     className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
                                     type="text"
-                                    placeholder="Author image"
-                                    name="agent_image" readOnly
-                                    defaultValue={agent_image}
+                                    placeholder="Agent image"
+                                    name="agent_image"
+                                    defaultValue={user.photoURL}
+
+
                                 />
                             </div>
                             <div >
@@ -150,40 +142,65 @@ const MakeOffer = () => {
                                 </h6>
                                 <input
                                     className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
-                                    placeholder="Salary Range "
+                                    placeholder="Location "
                                     type="text"
                                     name="location"
-                                    defaultValue={location}
-                                    readOnly
+
                                 />
                             </div>
                         </div>
 
                         <div className="flex gap-[50px] mb-8">
-                            <div className="">
-                                <h6 className="text-[#000] text-[20px] font-normal mb-2">
-                                    Property Posting Date
-                                </h6>
-                                <input
-                                    className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
-                                    type="date"
-                                    name="date"
-
-                                />
-                            </div>
                             <div className="mb-8">
                                 <h6 className="text-[#000] text-[20px] font-normal mb-2">
-                                    Price range
+                                    Max Price
                                 </h6>
                                 <input
                                     className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
                                     placeholder="Salary Range "
                                     type="number"
-                                    name="price"
+                                    name="Max_price"
                                     required
                                 />
                             </div>
+                            <div className="mb-8">
+                                <h6 className="text-[#000] text-[20px] font-normal mb-2">
+                                    Min Price
+                                </h6>
+                                <input
+                                    className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
+                                    placeholder="Salary Range "
+                                    type="number"
+                                    name="Min_Price"
 
+                                />
+                            </div>
+
+                        </div>
+                        <div className="mb-8">
+                            <h6 className="text-[#000] text-[20px] font-normal mb-2">
+                                Category
+                            </h6>
+                            {/* <input
+                                    className="rounded-[10px] w-[300px] py-[16px] px-[16px] border-2 bg-[transparent] border-[#000] text-[#000] outline-none"
+                                    placeholder="Category "
+                                    type="text"
+                                    name="category"
+                                    
+                                /> */}
+
+                            <select style={componentStyles} className="select select-bordered font  "
+                            name="category">
+                                <option disabled selected>Property Type</option>
+                                <option>Sale</option>
+                                <option>Residential</option>
+                                <option>Condos</option>
+                                <option>Rent</option>
+                                <option>Commercial</option>
+                                <option>  Shop</option>
+                                <option>  Apartment</option>
+                                <option>  Advertised</option>
+                            </select>
                         </div>
 
 
@@ -192,7 +209,7 @@ const MakeOffer = () => {
 
                         <div className="flex justify-center">
                             <button className="px-8 py-4 rounded-[30px] bg-[#BC8664] text-white font-semibold text-[18px]">
-                                Make a offer
+                                Add Property
                             </button>
                         </div>
                     </form>
@@ -203,4 +220,4 @@ const MakeOffer = () => {
     );
 };
 
-export default MakeOffer;
+export default AddNewProp;
