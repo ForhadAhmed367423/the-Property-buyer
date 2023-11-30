@@ -4,7 +4,7 @@ import Drawe from "./Drawe";
 const Dashboard = () => {
     return (
 
-        <div className="flex  gap-10 bg-[#FAF9F8]">
+        <div className="flex  gap-10 bg-[#FAF9F8] min-h-screen">
             <Drawe></Drawe>
             <Outlet></Outlet>
 
