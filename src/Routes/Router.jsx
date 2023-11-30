@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/items')
+        loader: () => fetch('https://assignment12-category-0010-server.vercel.app/items')
       },
       {
         path: '/login',
@@ -45,15 +45,15 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <BuildDetails></BuildDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment12-category-0010-server.vercel.app/items/${params.id}`)
       },
       {
         path: '/allproperty',
         element: <PrivetRoutes><AllPropertys></AllPropertys></PrivetRoutes>,
-        loader: () => fetch('http://localhost:5000/items')
+        loader: () => fetch('https://assignment12-category-0010-server.vercel.app/items')
       },
 
-    ] 
+    ]
   },
   {
     path: '/dashboard',
@@ -76,43 +76,43 @@ const router = createBrowserRouter([
         element: <Reviews />
       },
       {
-        path:'wishlist/makeoffer/:id',
-        element:<MakeOffer></MakeOffer>,
-        loader: ({ params }) => fetch(`http://localhost:5000/ToWishlist/${params.id}`)
+        path: 'wishlist/makeoffer/:id',
+        element: <MakeOffer></MakeOffer>,
+        loader: ({ params }) => fetch(`https://assignment12-category-0010-server.vercel.app/ToWishlist/${params.id}`)
       },
 
       // Admin routes here
-       {
-        path:'manageUser',
-        element:<ManageUser/>
-       },
-       {
-        path:'adminProfile',
-        element:<AdminRoute><AdminProfile></AdminProfile></AdminRoute>
-       },{
-        path:"myAddedProp",
-        element:<MyAddedProp/>
-       },
-       {
-         path:'manageProp',
-         element:<ManageProp></ManageProp>
-       },
-         {
-          path:'agentProfile',
-          element:<AgentProfile/>
-         },
-         {
-          path:'reqProp',
-          element:<ReqProp/>
-         },
-         {
-          path:'addNewProp',
-          element:<AddNewProp/>
-         },
-         {
-          path:'myAddedProp/myAddEdit/:id',
-          element:<MyAddEdit/>
-         }
+      {
+        path: 'manageUser',
+        element: <ManageUser />
+      },
+      {
+        path: 'adminProfile',
+        element: <AdminRoute><AdminProfile></AdminProfile></AdminRoute>
+      }, {
+        path: "myAddedProp",
+        element: <MyAddedProp />
+      },
+      {
+        path: 'manageProp',
+        element: <ManageProp></ManageProp>
+      },
+      {
+        path: 'agentProfile',
+        element: <AgentProfile />
+      },
+      {
+        path: 'reqProp',
+        element: <ReqProp />
+      },
+      {
+        path: 'addNewProp',
+        element: <AddNewProp />
+      },
+      {
+        path: 'myAddedProp/myAddEdit/:id',
+        element: <MyAddEdit />
+      }
 
     ]
   }

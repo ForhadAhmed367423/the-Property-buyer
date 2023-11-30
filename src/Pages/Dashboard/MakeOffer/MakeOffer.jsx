@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProviders";
 
 const MakeOffer = () => {
-    const {user}=useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const item = useLoaderData();
     const { agent_image, agent_name, title, image, location, wishedEmail } = item;
     console.log(item)
@@ -25,31 +25,31 @@ const MakeOffer = () => {
         const userName = form.user_name.value;
         const status = 'pending'
 
-        const propertyData = { image, name, agent_name, agent_image, location, user_email, price, date,userName,status };
+        const propertyData = { image, name, agent_name, agent_image, location, user_email, price, date, userName, status };
         console.log(propertyData);
 
-        fetch("http://localhost:5000/makeoffer",{
-        method: "POST",
-        headers: {
-            "content-type" : "application/json",
-        },
-        body: JSON.stringify(propertyData),
+        fetch("https://assignment12-category-0010-server.vercel.app/makeoffer", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(propertyData),
         })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            if (data.insertedId) {
-                Swal.fire({
-                    title: "Success!",
-                    text: "Offer added successfully.",
-                    icon: "success",
-                    confirmButtonText: "cool",
-                });
-            }
-        })
-        .catch((error) => {
-            console.error("There was a problem with the fetch operation:", error);
-        });
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Offer added successfully.",
+                        icon: "success",
+                        confirmButtonText: "cool",
+                    });
+                }
+            })
+            .catch((error) => {
+                console.error("There was a problem with the fetch operation:", error);
+            });
 
     }
 

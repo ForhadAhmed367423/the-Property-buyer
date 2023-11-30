@@ -12,4 +12,4 @@ const HomeBanner = () => {
     );
 };
 
-export default HomeBanner; git
+export default HomeBanner;

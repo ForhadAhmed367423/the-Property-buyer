@@ -26,7 +26,7 @@ const AddNewProp = () => {
         const propertyData = { image, title, agent_name, agent_image, location, user_email, Max_price, Min_Price, category };
         console.log(propertyData);
 
-        fetch("http://localhost:5000/items", {
+        fetch("https://assignment12-category-0010-server.vercel.app/items", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -190,7 +190,7 @@ const AddNewProp = () => {
                                 /> */}
 
                             <select style={componentStyles} className="select select-bordered font  "
-                            name="category">
+                                name="category">
                                 <option disabled selected>Property Type</option>
                                 <option>Sale</option>
                                 <option>Residential</option>

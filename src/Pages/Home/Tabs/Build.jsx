@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Build = ({ house }) => {
     const { _id, image, title, location, agent_name, agent_image, status, Max_price,Min_Price, category } = house;
     return (
-        <div className="card lg:w-96 max-[425px]:w-[400px] max-[425px]:ml-5 bg-base-100 shadow-xl">
+        <div className="card lg:w-96 max-[425px]:w-[400px] bg-base-100 shadow-xl">
             <figure>
                 <motion.div
                     className="box"

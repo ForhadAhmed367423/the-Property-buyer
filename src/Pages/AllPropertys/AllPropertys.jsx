@@ -85,7 +85,7 @@ const AllPropertys = () => {
         <>
             <Banner/>
             <div className="container mx-auto">
-                <Box sx={{ width: '80%' }}>
+                <Box sx={{ width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                             <Tab className='hover:text-[#BC8664]' label="For Sale" icon={<FaHome fontSize="large" />}  {...a11yProps(0)} />

@@ -5,12 +5,12 @@ import useMyAddedProo from "../../../Hook/useMyAddedProo";
 import { useParams } from "react-router-dom";
 
 const MyAddEdit = () => {
-    const [items] =useMyAddedProo(); 
+    const [items] = useMyAddedProo();
     console.log(items)
     const updateId = useParams();
-    const updateItem = items.filter(item=> item._id===updateId.id)
-    console.log("updated item :" ,updateItem)
-    
+    const updateItem = items.filter(item => item._id === updateId.id)
+    console.log("updated item :", updateItem)
+
     const componentStyles = {
         outline: 'none',
         // other styles here
@@ -34,7 +34,7 @@ const MyAddEdit = () => {
         const propertyData = { image, title, agent_name, agent_image, location, user_email, Max_price, Min_Price, category };
         console.log(propertyData);
 
-        fetch(`http://localhost:5000/item/${updateItem[0]._id}`, {
+        fetch(`https://assignment12-category-0010-server.vercel.app/item/${updateItem[0]._id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -44,7 +44,7 @@ const MyAddEdit = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                if (data.modifiedCount>0) {
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: "Success!",
                         text: "Property Update successfully.",
@@ -206,7 +206,7 @@ const MyAddEdit = () => {
                             <select style={componentStyles} className="select select-bordered font  "
                                 name="category"
                                 defaultValue={updateItem[0].category}
-                                >
+                            >
                                 <option disabled selected>Property Type</option>
                                 <option>Sale</option>
                                 <option>Residential</option>
