@@ -1,9 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProviders";
 
 const MakeOffer = () => {
+    
+useEffect(() => {
+    document.title= "T.B.P| Make Offer";
+  }, []);
     const { user } = useContext(AuthContext);
     const item = useLoaderData();
     const { agent_image, agent_name, title, image, location, wishedEmail } = item;

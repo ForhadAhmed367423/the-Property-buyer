@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Build from "../Tabs/Build";
 import HomeBanner from "../HomeBanner/HomeBanner";
 import OurAgent from "../OurAgent";
+import { useEffect } from "react";
 
 
 const Home = () => {
@@ -10,9 +11,13 @@ const Home = () => {
     const advertisement = houses.filter(house => house.category === "Advertised")
 
 
-
+    useEffect(() => {
+        document.title= "T.B.P| Home";
+      }, []);
     return (
+        
         <>
+        
         <HomeBanner/>
             <div className="container max-[425px]:mx-auto mx-auto my-8">
                 <h1 className="lg:text-5xl max-[425px]:text-3xl my-20 text-[#C28864] font font-bold text-center">Featured Collections</h1>

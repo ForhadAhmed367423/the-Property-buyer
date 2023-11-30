@@ -81,6 +81,9 @@ const AllPropertys = () => {
         Aos.init();
     })
 
+    useEffect(() => {
+        document.title= "T.B.P| All Property";
+      }, []);
     return (
         <>
             <Banner/>

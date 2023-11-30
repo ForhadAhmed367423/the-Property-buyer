@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 // import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProviders";
@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import SocialLog from "../Shared/Social/SocialLog";
 import useAxiosPublic from "../../useAxiosPublic ";
-
 
 
 
@@ -60,6 +59,9 @@ const SignUp = () => {
       })
   }
 
+  useEffect(() => {
+    document.title= "T.B.P| Sign Up";
+  }, []);
   return (
     <div className="hero min-h-screen bg-base-200">
 

@@ -50,6 +50,9 @@ const Login = () => {
             setDisabled(true)
         }
     }
+    useEffect(() => {
+      document.title= "T.B.P| Login";
+    }, []);
 
     return (
         <div className="hero min-h-screen bg-base-200">
